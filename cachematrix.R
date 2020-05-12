@@ -66,7 +66,6 @@ cacheSolve <- function(x, ...) {
         #the inverse of the matrix has already been calculated
         if(!is.null(inverseMatrix)) {
                 message("Getting cached inverse matrix for ya!")
-                return(inverseMatrix)
         }
         
         #If the inverse matrix is empty and 
@@ -80,8 +79,8 @@ cacheSolve <- function(x, ...) {
                 
                 # Setting the value with inverse matrix
                 x$setInverse(inverseMatrix)
-                inverseMatrix
         }
+        return(inverseMatrix)
 }
 
 
